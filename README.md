@@ -42,7 +42,18 @@ Many style guides fail by being too rigid in their expectations. A large part of
     
 - Be explicity, not implicit. This is applicable in many ways and can be hard to illustrate, but in short, it is better to explicitly call and define things than to rely on _magic_. **Magic bad**.
 - Naming things is hard, strive for excellence because code **is** documentation. The next developer to dive into your code (including future-you) will thank you for the time you spent on naming things with clarity and intention.
-- [Use verbs, not nouns][5].
+- [Use verbs, not nouns][5] when naming functions and methods.
+- Name variables to convey meaning and natural language. For example, a state-flag variable:
+    ```js
+    // Bad
+    var checkLoggedIn = false;
+    if (checkLoggedIn === true) // ...
+    
+    // Good
+    var userIsLoggedIn = false;
+    if (userIsLoggedIn) // ...
+    ```
+    
 - Use camel-case for variable naming (this is not PHP!):
     ```js
     var not_marmot; // Bad
